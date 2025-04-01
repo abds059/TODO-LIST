@@ -1,338 +1,389 @@
-:root{ 
-    --text-color: white;
-    --temp: green;
-    --hover-color: rgb(188, 233, 188);
+:root {
+  --text-color: white;
+  --temp: green;
+  --hover-color: rgb(188, 233, 188);
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
 }
 
-.main{
-    background-color: var(--temp);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main {
+  background-color: var(--temp);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h1{
-    position: absolute;
-    top: 20%;  
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: bold;
-    color: var(--text-color);
-    text-align: center;
-    font-size: 4rem;
-    font-family: 'Courier New', Courier, monospace;
-    max-width: 80%;
-    white-space: nowrap;
+h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Courier New", Courier, monospace;
+  max-width: 80%;
+  white-space: nowrap;
 }
 
-.box{
-    color: var(--temp);
-    background-color: var(--text-color);
-    border: 2px solid var(--hover-color);
-    border-radius: 12px;
-    padding: 3rem;
-    max-height: 50vh;
-    overflow: hidden;
-    max-width: 500px;
-    width: 80%;
+.box {
+  color: var(--temp);
+  background-color: var(--text-color);
+  border: 2px solid var(--hover-color);
+  border-radius: 12px;
+  padding: 3rem;
+  max-height: 50vh;
+  overflow: hidden;
+  max-width: 500px;
+  width: 80%;
 }
 
 .input-container {
-    display: flex; 
-    align-items: center; 
-    gap: 10px;
-    width: 100%; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
 
-input{
-    border: 2px solid var(--temp);
-    border-radius: 12px;
-    padding: 0.5em;
-    width: 60%;
-    color: var(--temp);
-    flex: 1;
+input {
+  border: 2px solid var(--temp);
+  border-radius: 12px;
+  padding: 0.5em;
+  width: 60%;
+  color: var(--temp);
+  flex: 1;
 }
 
-input:hover{
-    background-color: var(--hover-color);
-    color: var(--text-color);
+input:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
 }
 
-button{
-    border: 2px solid var(--temp);
-    border-radius: 6px;
-    padding: 0.5em;
-    color: var(--temp);
-    cursor: pointer;
+button {
+  border: 2px solid var(--temp);
+  border-radius: 6px;
+  padding: 0.5em;
+  color: var(--temp);
+  cursor: pointer;
 }
 
-button:hover{
-    background-color: var(--hover-color);
-    color: var(--text-color);
+button:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
 }
 
-.tasks{
-    margin: 0.5em;
-    overflow-y: auto;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
-    max-height: 200px;
-    width: calc(100% - 1em);
-    padding-right: 5px;
+.tasks {
+  margin: 0.5em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  max-height: 200px;
+  width: calc(100% - 1em);
+  padding-right: 5px;
 }
 
-ul li{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: nowrap;
-    margin-bottom: 8px;
-    padding-right: 5px;
+ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: nowrap;
+  margin-bottom: 8px;
+  padding-right: 5px;
 }
 
-ul li span{
-    display: inline-block;
-    margin-left: auto;
-    cursor: pointer;
+ul li span {
+  display: inline-block;
+  margin-left: auto;
+  cursor: pointer;
 }
 
 ul li span:last-child {
-    margin-left: 5px;
-    flex-shrink: 0;
+  margin-left: 5px;
+  flex-shrink: 0;
 }
 
 ul li img {
-    flex-shrink: 0;
-    width: 1.5em;
-    height: 1.5em;
+  flex-shrink: 0;
+  width: 1.5em;
+  height: 1.5em;
 }
 
-ul li img:hover{
-    border: 2px var(--text-color);
-    border-radius: 50%;
-    background-color: var(--hover-color);
+ul li img:hover {
+  border: 2px var(--text-color);
+  border-radius: 50%;
+  background-color: var(--hover-color);
 }
 
-.task_text{
-    align-self: flex-start;
-    margin-right: auto;
-    margin-left: 5px;
-    padding: 0.5em;
-    word-wrap: break-word;
-    word-break: break-word;
-    max-width: 70%;
-    overflow-wrap: break-word;
+.task_text {
+  align-self: flex-start;
+  margin-right: auto;
+  margin-left: 5px;
+  padding: 0.5em;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 70%;
+  overflow-wrap: break-word;
 }
 
-ul li .task_text:hover{
-    border: 2px var(--text-color);
-    border-radius: 12px;
-    background-color: var(--hover-color);
+ul li .task_text:hover {
+  border: 2px var(--text-color);
+  border-radius: 12px;
+  background-color: var(--hover-color);
 }
 
 /* Taskbar scrollable */
 .tasks::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 
 .tasks::-webkit-scrollbar-thumb {
-    background-color: var(--temp);
-    border-radius: 4px;
+  background-color: var(--temp);
+  border-radius: 4px;
 }
 
 .tasks::-webkit-scrollbar-track {
-    background: var(--hover-color);
+  background: var(--hover-color);
 }
-
 
 /* Add these styles to your existing CSS */
 
 /* Special class for touch devices */
 .touch-icon {
-    /* Remove hover effects that might cause issues */
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
+  /* Remove hover effects that might cause issues */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .touch-icon:hover {
-    /* Override any hover effects for touch devices */
-    background-color: transparent !important;
-    border: none !important;
+  /* Override any hover effects for touch devices */
+  background-color: transparent !important;
+  border: none !important;
 }
 
 /* Add a visual active state for touch */
 .touch-icon:active {
-    opacity: 0.7;
-    transform: scale(0.95);
+  opacity: 0.7;
+  transform: scale(0.95);
 }
 
 /* Make sure the task text doesn't have hover effects on touch devices */
 @media (hover: none) {
-    ul li .task_text:hover {
-        background-color: transparent !important;
-        border: none !important;
-    }
-    
-    ul li img:hover {
-        background-color: transparent !important;
-        border: none !important;
-    }
-    
-    input:hover, button:hover {
-        background-color: var(--text-color);
-        color: var(--temp);
-    }
-    
-    /* For active states on touch */
-    ul li img:active {
-        opacity: 0.7;
-        transform: scale(0.95);
-    }
-    
-    button:active {
-        background-color: var(--hover-color);
-        color: var(--text-color);
-    }
+  ul li .task_text:hover {
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  ul li img:hover {
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  input:hover,
+  button:hover {
+    background-color: var(--text-color);
+    color: var(--temp);
+  }
+
+  /* For active states on touch */
+  ul li img:active {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+
+  button:active {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+  }
+}
+
+/* Specific styles for mobile icon handling */
+ul li img {
+  display: inline-block !important;
+  flex-shrink: 0;
+  width: 1.5em !important;
+  height: 1.5em !important;
+  min-width: 1.5em;
+  vertical-align: middle;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+/* Ensure the span containers for icons are properly displayed */
+ul li span:last-child {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  flex-shrink: 0;
+}
+
+/* Make sure our touch adaptations don't interfere with icon display */
+.touch-icon,
+ul li img.touch-icon {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  display: inline-block !important;
+}
+
+/* Override any hover effects but keep the icon visible */
+.touch-icon:hover,
+ul li img.touch-icon:hover {
+  background-color: transparent;
+  border: none;
+  opacity: 1;
+}
+
+/* Add simple visual feedback for touch */
+.touch-icon:active,
+ul li img.touch-icon:active {
+  opacity: 0.7;
+  transform: scale(0.95);
 }
 
 /* Media Queries */
 
-@media screen and (max-width: 870px){
-    h1{
-        font-size: 3rem;
-    }
+@media screen and (max-width: 870px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 
-@media screen and (max-width: 650px){
-    h1{
-        font-size: 3rem;
-    }
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 
-@media screen and (max-width: 450px){
-    h1{
-        font-size: 2rem;
-    }
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 2rem;
+  }
 
-    .box{
-        padding: 2rem;
-        width: 90%;
-    }
+  .box {
+    padding: 2rem;
+    width: 90%;
+  }
 
-    input{
-        width: 75%;
-        padding: 0.5em;
-        height: 30px;
-        font-size: 16px;
-    }
+  input {
+    width: 75%;
+    padding: 0.5em;
+    height: 30px;
+    font-size: 16px;
+  }
 
-    button{
-        width: 30%;
-        padding: 0.5em 0;
-        font-size: 12px;
-        text-align: center;
-    }
+  button {
+    width: 30%;
+    padding: 0.5em 0;
+    font-size: 12px;
+    text-align: center;
+  }
 
+  ul li img {
+    width: 1.2em !important;
+    height: 1.2em !important;
+    min-width: 1.2em;
+  }
 }
 
-@media screen and (max-width: 300px){
-    h1{
-        font-size: 1.5rem;
-    }
+@media screen and (max-width: 300px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 
-    .box{
-        padding: 1.5rem;
-        width: 90%;
-    }
+  .box {
+    padding: 1.5rem;
+    width: 90%;
+  }
 
-    input{
-        width: 75%;
-        padding: 0.5em;
-        height: 20px;
-        font-size: 14px; 
-    }
+  input {
+    width: 75%;
+    padding: 0.5em;
+    height: 20px;
+    font-size: 14px;
+  }
 
-    button{
-        width: 30%;
-        padding: 0.5em 0;
-        font-size: 12px; 
-        text-align: center;
-    }
+  button {
+    width: 30%;
+    padding: 0.5em 0;
+    font-size: 12px;
+    text-align: center;
+  }
 
-    ul li {
-        font-size: 14px; 
-        padding: 0.3em;
-        display: flex;
-        align-items: center;
-        margin-bottom: 5px;
-    }
-    
-    .task_text {
-        font-size: 14px;
-        max-width: 65%; 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        word-wrap: break-word;
-    }
-    
-    ul li img {
-        width: 18px;  
-        height: 18px; 
-        min-width: 18px; 
-    }
+  ul li {
+    font-size: 14px;
+    padding: 0.3em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .task_text {
+    font-size: 14px;
+    max-width: 65%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  }
+
+  ul li img {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+  }
 }
 
-@media screen and (max-width: 200px){
-    h1{
-        white-space: normal; 
-        font-size: 1rem;
-    }
-    
-    .input-container{
-        flex-wrap: wrap; 
-        justify-content: center;
-    }
-    
-    input, button {
-        width: 100%; 
-        margin: 5px 0;
-        font-size: 12px;
-    }
-    
-    ul li {
-        font-size: 12px; 
-        padding: 0.3em;
-        margin-bottom: 3px;
-        flex-wrap: nowrap;
-    }
-    
-    .task_text {
-        font-size: 12px;
-        max-width: 60%; 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: normal;
-        word-wrap: break-word;
-    }
-    
-    ul li img {
-        width: 16px;  
-        height: 16px;
-        min-width: 16px; 
-    }
-    
-    .tasks {
-        max-height: 150px;
-    }
+@media screen and (max-width: 200px) {
+  h1 {
+    white-space: normal;
+    font-size: 1rem;
+  }
+
+  .input-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  input,
+  button {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 12px;
+  }
+
+  ul li {
+    font-size: 12px;
+    padding: 0.3em;
+    margin-bottom: 3px;
+    flex-wrap: nowrap;
+  }
+
+  .task_text {
+    font-size: 12px;
+    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  ul li img {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px;
+  }
+
+  .tasks {
+    max-height: 150px;
+  }
 }
