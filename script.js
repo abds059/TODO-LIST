@@ -12,7 +12,7 @@ function add_tasks() {
     let li = document.createElement("li");
 
     let check_icon = document.createElement("img");
-    check_icon.src = "/circle.png";
+    check_icon.src = "circle.png";
     check_icon.alt = "Unchecked";
     check_icon.style.width = "1.5em";
     check_icon.style.height = "1.5em";
@@ -24,7 +24,7 @@ function add_tasks() {
 
     let del_task = document.createElement("span");
     let del_icon = document.createElement("img");
-    del_icon.src = "/cross.png";
+    del_icon.src = "cross.png";
     del_icon.alt = "Delete";
     del_icon.style.width = "1.5em";
     del_icon.style.height = "1.5em";
@@ -64,10 +64,10 @@ function delete_task(li) {
 
 function mark_done(check_icon, task_text) {
   if (check_icon.src.includes("circle.png")) {
-    check_icon.src = "/success.png";
+    check_icon.src = "success.png";
     task_text.style.textDecoration = "line-through";
   } else {
-    check_icon.src = "/circle.png";
+    check_icon.src = "circle.png";
     task_text.style.textDecoration = "none";
   }
   save_tasks();
