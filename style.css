@@ -156,6 +156,56 @@ ul li .task_text:hover{
 }
 
 
+/* Add these styles to your existing CSS */
+
+/* Special class for touch devices */
+.touch-icon {
+    /* Remove hover effects that might cause issues */
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.touch-icon:hover {
+    /* Override any hover effects for touch devices */
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Add a visual active state for touch */
+.touch-icon:active {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+/* Make sure the task text doesn't have hover effects on touch devices */
+@media (hover: none) {
+    ul li .task_text:hover {
+        background-color: transparent !important;
+        border: none !important;
+    }
+    
+    ul li img:hover {
+        background-color: transparent !important;
+        border: none !important;
+    }
+    
+    input:hover, button:hover {
+        background-color: var(--text-color);
+        color: var(--temp);
+    }
+    
+    /* For active states on touch */
+    ul li img:active {
+        opacity: 0.7;
+        transform: scale(0.95);
+    }
+    
+    button:active {
+        background-color: var(--hover-color);
+        color: var(--text-color);
+    }
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 870px){
